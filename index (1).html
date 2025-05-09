@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STYLGROUP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #333;
+    }
+    header, section {
+      padding: 40px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    header.visible, section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    header {
+      background: #ffffff;
+      color: #000;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 {
+      color: #0055ff;
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    header img.logo {
+      height: 36px;
+    }
+    .hero-image {
+      background: #ffffff;
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .overlay {
+      color: #333;
+      font-size: 2rem;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .section-title {
+      color: #0055ff;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .two-column {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .two-column > div {
+      flex: 1;
+      min-width: 300px;
+    }
+    footer {
+      background: #ffffff;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #eee;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      background: #0055ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .contact-form button:hover {
+      background: #003ecb;
+    }
+    .icon-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .icon-grid div {
+      width: 100px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .icon-grid div:hover {
+      transform: scale(1.05);
+      background-color: #f0f4ff;
+    }
+    .countries-section {
+      text-align: center;
+      padding: 40px;
+    }
+    .country-names span {
+      margin: 0 15px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #0055ff;
+      transition: color 0.3s;
+    }
+    .country-names span:hover {
+      color: #003ecb;
+    }
+    .outline-image {
+      margin-top: 30px;
+      max-width: 100%;
+      height: 300px;
+      object-fit: contain;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .map-links {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #0055ff;
+    }
+    .map-links a {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: #0055ff;
+    }
+    .map-links a:hover {
+      color: #003ecb;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 768px) {
+      header, section {
+        padding: 20px;
+      }
+      .hero-image {
+        height: 40vh;
+      }
+      .overlay {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero-image">
+  <div class="overlay">Welcome to STYLGROUP</div>
+</div>
+
+<!-- Why Choose Section -->
+<section class="why-choose">
+  <h2 class="section-title">Why Choose Styl Smyth and Kraft?</h2>
+  <p>At Styl Smyth and Kraft, we pride ourselves on delivering exceptional quality, innovative solutions, and unparalleled customer service. Here’s why we stand out:</p>
+  <div class="two-column">
+    <div>
+      <h3>Expertise</h3>
+      <p>With years of industry experience, we bring unmatched expertise to every project we handle, ensuring top-notch results.</p>
+    </div>
+    <div>
+      <h3>Innovation</h3>
+      <p>We constantly push boundaries, offering creative and innovative solutions that set us apart from the competition.</p>
+    </div>
+    <div>
+      <h3>Customer Focus</h3>
+      <p>Your satisfaction is our priority. We work closely with you to tailor our services to your exact needs, every step of the way.</p>
+    </div>
+    <div>
+      <h3>Reliability</h3>
+      <p>We deliver on time, every time, ensuring that your projects are completed to the highest standards with efficiency and reliability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Styl Smyth and Kraft. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
